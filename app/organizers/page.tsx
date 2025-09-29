@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function OrganizersPage() {
   const groups: Array<{
@@ -6,46 +7,46 @@ export default function OrganizersPage() {
     note?: string;
     people: Array<{ name: string; role?: string; img?: string; id?: string }>;
   }> = [
-    {
-      title: "Faculty Advisor(s)",
-      people: [
-        { name: "[Name]", role: "Faculty Advisor", img: "/mamun.png" },
-      ],
-    },
-    {
-      title: "Club President",
-      people: [
-        { name: "[Name]", role: "President", img: "/mamun.png" },
-      ],
-    },
-    {
-      title: "Event Conveners",
-      people: [
-        { name: "[Name]", role: "Convener", img: "/mamun.png" },
-        { name: "[Name]", role: "Co-Convener", img: "/mamun.png" },
-      ],
-    },
-    {
-      title: "Core Committee",
-      // note: "[Names & Roles]",
-      people: [
-        { name: "[Name]", role: "CTF Challenge Lead", img: "/mamun.png" },
-        { name: "[Name]", role: "Operations & Logistics", img: "/mamun.png" },
-        { name: "[Name]", role: "Design & Communications", img: "/mamun.png" },
-        { name: "[Name]", role: "Sponsorships & Partnerships", img: "/mamun.png" },
-      ],
-    },
-    {
-      title: "Volunteer Team",
-      // note: "[Names only]",
-      people: [
-        { name: "[Name]", id: "[ID]" },
-        { name: "[Name]", id: "[ID]" },
-        { name: "[Name]", id: "[ID]" },
-        { name: "[Name]", id: "[ID]" },
-      ],
-    },
-  ];
+      {
+        title: "Faculty Advisor(s)",
+        people: [
+          { name: "[Name]", role: "Faculty Advisor", img: "/mamun.png" },
+        ],
+      },
+      {
+        title: "Club President",
+        people: [
+          { name: "[Name]", role: "President", img: "/mamun.png" },
+        ],
+      },
+      {
+        title: "Event Conveners",
+        people: [
+          { name: "[Name]", role: "Convener", img: "/mamun.png" },
+          { name: "[Name]", role: "Co-Convener", img: "/mamun.png" },
+        ],
+      },
+      {
+        title: "Core Committee",
+        // note: "[Names & Roles]",
+        people: [
+          { name: "[Name]", role: "CTF Challenge Lead", img: "/mamun.png" },
+          { name: "[Name]", role: "Operations & Logistics", img: "/mamun.png" },
+          { name: "[Name]", role: "Design & Communications", img: "/mamun.png" },
+          { name: "[Name]", role: "Sponsorships & Partnerships", img: "/mamun.png" },
+        ],
+      },
+      {
+        title: "Volunteer Team",
+        // note: "[Names only]",
+        people: [
+          { name: "[Name]", id: "[ID]" },
+          { name: "[Name]", id: "[ID]" },
+          { name: "[Name]", id: "[ID]" },
+          { name: "[Name]", id: "[ID]" },
+        ],
+      },
+    ];
 
   return (
     <div className="min-h-screen bg-[#1B273D] text-white">
@@ -114,7 +115,7 @@ export default function OrganizersPage() {
         </div>
 
         <div className="mt-10">
-          <a href="/" className="text-sm text-white/70 hover:text-white">← Back to Home</a>
+          <Link href="/" className="text-sm text-white/70 hover:text-white">← Back to Home</Link>
         </div>
       </div>
     </div>
