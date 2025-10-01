@@ -31,8 +31,8 @@ export default function Home() {
     return (
       <div className="rounded-2xl border border-emerald-400/20 bg-emerald-500/5 p-6">
         <div className="text-center">
-          <div className="text-white/80 font-medium text-3xl">National CTF Competition 2025</div>
-          <div className="text-white/80 font-medium text-sm">The registration closes in</div>
+          <div className="text-white/80 font-medium text-3xl pb-2">National CTF Competition 2025</div>
+          <div className="text-white/80 font-medium text-xl">The registration closes in</div>
         </div>
         <div className="mt-4 grid grid-cols-4 gap-3 text-center">
           {[{ k: "Days", v: days }, { k: "Hours", v: hours }, { k: "Minutes", v: minutes }, { k: "Seconds", v: seconds }].map((i) => (
