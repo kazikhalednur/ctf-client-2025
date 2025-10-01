@@ -23,7 +23,7 @@ export default function Home() {
 
   function Countdown() {
     // Set your event start time here (local time). Example: Nov 16, 2025 09:00.
-    const { days, hours, minutes, seconds, done } = useCountdown("2025-11-16T09:00:00");
+    const { days, hours, minutes, seconds, done } = useCountdown("2025-10-08T12:00:00");
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
       setMounted(true);
@@ -32,7 +32,7 @@ export default function Home() {
       <div className="rounded-2xl border border-emerald-400/20 bg-emerald-500/5 p-6">
         <div className="text-center">
           <div className="text-white/80 font-medium text-3xl">National CTF Competition 2025</div>
-          <div className="text-white/80 font-medium text-sm">The registration opens in</div>
+          <div className="text-white/80 font-medium text-sm">The registration closes in</div>
         </div>
         <div className="mt-4 grid grid-cols-4 gap-3 text-center">
           {[{ k: "Days", v: days }, { k: "Hours", v: hours }, { k: "Minutes", v: minutes }, { k: "Seconds", v: seconds }].map((i) => (
@@ -53,40 +53,42 @@ export default function Home() {
     );
   }
   return (
-    <div className="font-sans min-h-screen bg-[#1B273D] text-white relative">
+    <div className="font-sans min-h-screen bg-[#3b065e] text-white relative">
       {/* Background tint overlay */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/0 via-white/0 to-white/0" />
-      <header className="border-b border-white/10 backdrop-blur sticky top-0 z-20 bg-gradient-to-b from-[#1B273D]/70 to-transparent">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="border-b border-white/10 backdrop-blur sticky top-0 z-20 bg-gradient-to-b from-[#3b065e]/70 to-transparent">
+        <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/diu.png" alt="CTF" width={32} height={32} className="rounded" />
-            <span className="text-sm font-medium tracking-wide text-white/90">DIU CTF</span>
+            <Image src="/diu_cybercon.png" alt="CTF" width={64} height={64} className="rounded" />
+            <span className="text-xl font-medium tracking-wide text-white/90">DIU CYBERCON</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm text-white/70">
-            <a href="#about" className="hover:text-white">About</a>
-            <a href="#tracks" className="hover:text-white">Tracks</a>
-            <a href="#timeline" className="hover:text-white">Timeline</a>
-            <a href="#prizes" className="hover:text-white">Prizes</a>
-            <a href="#location" className="hover:text-white">Location</a>
-            <a href="#organizers" className="hover:text-white">Organizers</a>
+            <a href="#about" className="hover:text-white">ABOUT</a>
+            <a href="/speakers" className="hover:text-white">SPEAKERS</a>
+            {/* <a href="#tracks" className="hover:text-white">Tracks</a> */}
+            <a href="#timeline" className="hover:text-white">EVENTS</a>
+            <a href="#prizes" className="hover:text-white">PRIZES</a>
+            {/* <a href="#location" className="hover:text-white">Location</a> */}
+            <a href="#organizers" className="hover:text-white">ORGANIZERS</a>
             <a href="#faq" className="hover:text-white">FAQ</a>
-            <a href="#register" className="px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400">Register</a>
+            <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400">REGISTER</a>
           </nav>
         </div>
         {/* Mobile nav */}
         <div className="sm:hidden border-t border-white/10">
-          <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3 overflow-x-auto text-xs text-white/70 [scrollbar-width:none] [-ms-overflow-style:none]">
+          <nav className="max-w-screen-2xl mx-auto px-3 py-3 flex items-center gap-3 overflow-x-auto text-xs text-white/70 [scrollbar-width:none] [-ms-overflow-style:none]">
             <style jsx>{`
               nav::-webkit-scrollbar{display:none}
             `}</style>
-            <a href="#about" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">About</a>
-            <a href="#tracks" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Tracks</a>
-            <a href="#timeline" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Timeline</a>
-            <a href="#prizes" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Prizes</a>
-            <a href="#location" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Location</a>
-            <a href="#organizers" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Organizers</a>
+            <a href="#about" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">ABOUT</a>
+            {/* <a href="#tracks" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Tracks</a> */}
+            <a href="#speakers" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">SPEAKERS</a>
+            <a href="#timeline" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">EVENTS</a>
+            <a href="#prizes" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">PRIZES</a>
+            {/* <a href="#location" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Location</a> */}
+            <a href="#organizers" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">ORGANIZERS</a>
             <a href="#faq" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">FAQ</a>
-            <a href="#register" className="shrink-0 px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400 border border-emerald-400/30">Register</a>
+            <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="shrink-0 px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400 border border-emerald-400/30">REGISTER</a>
           </nav>
         </div>
       </header>
@@ -97,46 +99,42 @@ export default function Home() {
           <div className="absolute inset-0 -z-10">
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-[120vw] rounded-[100%] bg-emerald-500/10 blur-3xl" />
           </div>
-          <div className="max-w-6xl mx-auto px-6 pt-24 pb-16">
+          <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-24 pb-16">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                   Welcome to National CTF Competition 2025!
                 </h1>
                 <p className="mt-4 text-white/70 text-base md:text-lg leading-relaxed">
-                  Test your offensive security skills across Web, Pwn, Crypto, Forensics and more.
-                  Assemble your team, pop shells, and climb the leaderboard.
+                Organized by the Cyber Security Club, Department of Computer Science & Engineering, Daffodil International University, this national-level Capture the Flag (CTF) contest is designed to bring together the brightest minds in cybersecurity
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href="#register" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register Now</a>
+                  <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register Now</a>
                   <a href="#rules" className="px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 text-white">Rules</a>
                 </div>
                 <div className="mt-6 flex items-center gap-4 text-xs text-white/60">
                   <span className="flex items-center gap-2">
+                    <a href="#location">
                     <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/5">
                       <svg aria-hidden viewBox="0 0 24 24" className="h-3.5 w-3.5 text-emerald-400">
                         <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
                       </svg>
                     </span>
-                    <span className="whitespace-nowrap">Daffodil International University</span>
+                    </a>
+                    <a href="#location" className="whitespace-nowrap">Daffodil International University</a>
                   </span>
-                  <span>Online • 36 hours</span>
-                  <span>Team size: up to 4</span>
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl border border-white/10 bg-transparent p-6">
-                  <div className="h-full w-full grid grid-cols-3 gap-3">
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                    <div className="rounded-lg bg-transparent border border-white/10" />
-                  </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/CYBER_DATE ANN1.jpg"
+                    alt="National CTF Competition Banner"
+                    width={1600}
+                    height={900}
+                    className="w-full h-auto object-contain"
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -144,12 +142,12 @@ export default function Home() {
         </section>
 
         {/* Countdown */}
-        <section className="max-w-6xl mx-auto px-6 pt-20 pb-8">
+        <section className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-20 pb-8">
           <Countdown />
         </section>
 
         {/* About */}
-        <section id="about" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="about" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">About</h2>
           <div className="mt-4 grid md:grid-cols-2 gap-6">
             <div>
@@ -174,7 +172,7 @@ export default function Home() {
 
 
         {/* Tracks */}
-        <section id="tracks" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="tracks" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">Tracks</h2>
           <p className="mt-2 text-white/60">Participants will solve challenges in these domains.</p>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -239,7 +237,7 @@ export default function Home() {
         </section>
 
         {/* Timeline */}
-        <section id="timeline" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="timeline" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">Timeline</h2>
           <p className="mt-2 text-white/60">Key milestones and event-day schedule.</p>
           <div className="mt-8 relative">
@@ -247,41 +245,41 @@ export default function Home() {
             <ol className="space-y-6">
               {[
                 {
-                  date: "Oct 10",
-                  time: "09:00",
-                  title: "Registration Opens",
+                  date: "Oct 08",
+                  time: "12:00 PM",
+                  title: "Registration closes",
                   desc: "Teams can register online. Limited slots available.",
                 },
                 {
-                  date: "Nov 2",
-                  time: "10:00–22:00",
-                  title: "Online Qualifier (12h)",
-                  desc: "Score at least 300 points to qualify for on-site finals.",
+                  date: "Nov 9",
+                  time: "10:00 AM - 04:00 PM",
+                  title: "Online Qualifier (6h)",
+                  desc: "Top 30 teams are qualify for on-site finals.",
                 },
-                {
-                  date: "Nov 16",
-                  time: "08:00",
-                  title: "On-site Check-in",
-                  desc: "Badge pickup, networking, and briefing at DIU Auditorium.",
-                },
-                {
-                  date: "Nov 16",
-                  time: "09:00",
-                  title: "Finals Start",
-                  desc: "36-hour CTF begins. Tracks open gradually with dynamic scoring.",
-                },
-                {
-                  date: "Nov 17",
-                  time: "21:00",
-                  title: "Finals End",
-                  desc: "Challenge submissions close. Scoreboard locks.",
-                },
-                {
-                  date: "Nov 17",
-                  time: "21:30",
-                  title: "Awards & Closing",
-                  desc: "Winners announced; certificates and prizes distributed.",
-                },
+                // {
+                //   date: "Nov 16",
+                //   time: "08:00",
+                //   title: "On-site Check-in",
+                //   desc: "Badge pickup, networking, and briefing at DIU Auditorium.",
+                // },
+                // {
+                //   date: "Nov 16",
+                //   time: "09:00",
+                //   title: "Finals Start",
+                //   desc: "36-hour CTF begins. Tracks open gradually with dynamic scoring.",
+                // },
+                // {
+                //   date: "Nov 17",
+                //   time: "21:00",
+                //   title: "Finals End",
+                //   desc: "Challenge submissions close. Scoreboard locks.",
+                // },
+                // {
+                //   date: "Nov 17",
+                //   time: "21:30",
+                //   title: "Awards & Closing",
+                //   desc: "Winners announced; certificates and prizes distributed.",
+                // },
               ].map((e) => (
                 <li key={e.title} className="relative pl-12">
                   <div className="absolute left-0 top-1 h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_3px_rgba(16,185,129,0.15)]" />
@@ -299,14 +297,13 @@ export default function Home() {
         </section>
 
         {/* Prizes */}
-        <section id="prizes" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="prizes" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">Prizes</h2>
-          <p className="mt-2 text-white/60">All amounts are in Bangladeshi Taka (৳).</p>
           <div className="mt-8 grid md:grid-cols-3 gap-4">
             {[
-              { place: "Champion", amount: 150000, perks: ["Trophy", "Certificates", "Swag Kit"] },
-              { place: "1st Runner-up", amount: 100000, perks: ["Certificates", "Swag Kit"] },
-              { place: "2nd Runner-up", amount: 50000, perks: ["Certificates", "Swag Kit"] },
+              { place: "Champion", amount: 50000, perks: ["Trophy", "Certificates", "Swag Kit"] },
+              { place: "1st Runner-up", amount: 30000, perks: ["Certificates", "Swag Kit"] },
+              { place: "2nd Runner-up", amount: 20000, perks: ["Certificates", "Swag Kit"] },
             ].map((p) => (
               <div key={p.place} className="rounded-xl border border-yellow-400/20 bg-transparent p-6">
                 <div className="text-yellow-300 text-sm">{p.place}</div>
@@ -315,24 +312,24 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-8 grid md:grid-cols-2 gap-4">
-            {[
-              { title: "Best Web Exploit", amount: 20000 },
-              { title: "Best Pwn", amount: 20000 },
-              { title: "Best Crypto", amount: 15000 },
-              { title: "Best Forensics", amount: 15000 },
-            ].map((a) => (
-              <div key={a.title} className="rounded-xl border border-emerald-400/20 bg-transparent p-6">
-                <div className="text-white/80 font-medium">{a.title}</div>
-                <div className="text-xl font-semibold mt-1">৳{a.amount.toLocaleString("en-BD")}</div>
+        </section>
+
+        {/* Sponsors */}
+        <section id="sponsors" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
+          <h2 className="text-2xl md:text-3xl font-semibold">Sponsors</h2>
+          <p className="mt-2 text-white/60">Thanks to our partners for supporting National CTF Competition 2025.</p>
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center">
+            {["/diu.png"].map((src) => (
+              <div key={src} className="rounded-xl border border-white/10 bg-white/5 p-6 flex items-center justify-center">
+                <Image src={src} alt="Sponsor" width={140} height={40} className="opacity-90 contrast-125 invert-0" />
               </div>
             ))}
           </div>
-          <p className="text-white/50 text-xs mt-4">Note: Prize distribution subject to tax and institutional policies.</p>
+          <div className="mt-6 text-sm text-white/60">Want to sponsor? <a href="mailto:csc@diu.edu.bd" className="underline decoration-white/30 hover:text-white">Get in touch</a>.</div>
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="faq" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">FAQ</h2>
           <div className="mt-6 divide-y divide-white/10 rounded-xl border border-white/10">
             {[
@@ -369,32 +366,34 @@ export default function Home() {
         </section>
 
         {/* Location */}
-        <section id="location" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="location" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">Location</h2>
-          <p className="mt-2 text-white/60">Daffodil International University, Dhaka, Bangladesh</p>
+
           <div className="mt-6 grid md:grid-cols-2 gap-6 items-stretch">
-            <div className="rounded-xl border border-white/10 p-5 bg-transparent">
-              <div className="text-white/80 font-medium">Venue details</div>
-              <ul className="mt-3 text-white/70 text-sm space-y-2">
-                <li>• Auditorium, DIU Permanent Campus</li>
-                <li>• Event Day: Nov 16–17</li>
-                <li>• Check-in opens: 8:00 AM</li>
-              </ul>
-            </div>
+
             <div className="rounded-xl overflow-hidden border border-white/10">
               <iframe
                 title="DIU Location"
-                className="w-full h-80 md:h-full"
+                className="w-full h-[400px] md:h-[350px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.358767951479!2d90.321672!3d23.734985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf3e1d4a2a7f%3A0x6a9b0a2a7e1c0c8b!2sDaffodil%20International%20University!5e0!3m2!1sen!2sbd!4v1695390000000!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14594.12324150444!2d90.3119246!3d23.8707891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ada2664e21%3A0x3c872fd17bc11ddb!2sDaffodil%20International%20University!5e0!3m2!1sen!2sbd!4v1759309727039!5m2!1sen!2sbdf6"
               />
+            </div>
+            <div className="max-w-lg">
+              <div className="rounded-xl border border-white/10 p-5 bg-transparent">
+                <div className="text-white/80 font-medium">Venue details</div>
+                <ul className="mt-3 text-white/70 text-sm space-y-2">
+                  <li>Daffodil International University</li>
+                  <li>Daffodil Smart City, Ashulia, Dhaka, Bangladesh</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section id="register" className="max-w-6xl mx-auto px-6 py-16">
+        <section id="register" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <div className="rounded-2xl border border-emerald-400/20 bg-transparent p-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-xl md:text-2xl font-semibold">Ready to hack?</h3>
@@ -408,7 +407,7 @@ export default function Home() {
         </section>
 
         {/* Organizers CTA */}
-        <section id="organizers" className="max-w-6xl mx-auto px-6 pb-20">
+        <section id="organizers" className="max-w-screen-2xl mx-auto px-3 sm:px-5 pb-20">
           <div className="rounded-2xl border border-white/10 p-8 flex flex-col md:flex-row items-center justify-between gap-6 bg-transparent">
             <div>
               <h3 className="text-xl md:text-2xl font-semibold">Meet the Organizers</h3>
@@ -420,12 +419,13 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-8 text-sm text-white/50 flex items-center justify-between">
-          <span>© 2025 DIU CTF</span>
+        <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-8 text-sm text-white/50 flex items-center justify-between">
+          <span>© 2025 DIU CY</span>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-white">Discord</a>
-            <a href="#" className="hover:text-white">Twitter</a>
-            <a href="#" className="hover:text-white">Email</a>
+            <a href="mailto:csclub@diu.edu.bd" className="hover:text-white">Email</a>
+            <a href="https://discord.gg/QwHm5F5y" className="hover:text-white">Discord</a>
+            <a href="https://www.facebook.com/share/p/17QVYda4sJ/" className="hover:text-white">Facebook</a>
+            <a href="https://www.linkedin.com/company/csclubdiu/" className="hover:text-white">LinkedIn</a>
           </div>
         </div>
       </footer>

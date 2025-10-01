@@ -49,8 +49,8 @@ export default function OrganizersPage() {
     ];
 
   return (
-    <div className="min-h-screen bg-[#1B273D] text-white">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="min-h-screen bg-[#3b065e] text-white">
+      <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-12">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Organizers</h1>
         <p className="mt-2 text-white/70">The people who make this event possible.</p>
 

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DIU CTF 2025",
+  title: "DIU CYBERCON 2025",
   description: "Capture The Flag competition — Web, Pwn, Crypto, Forensics and more.",
 };
 
