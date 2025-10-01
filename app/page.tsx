@@ -106,7 +106,7 @@ export default function Home() {
                   Welcome to National CTF Competition 2025!
                 </h1>
                 <p className="mt-4 text-white/70 text-base md:text-lg leading-relaxed">
-                Organized by the Cyber Security Club, Department of Computer Science & Engineering, Daffodil International University, this national-level Capture the Flag (CTF) contest is designed to bring together the brightest minds in cybersecurity
+                  Organized by the Cyber Security Club, Department of Computer Science & Engineering, Daffodil International University, this national-level Capture the Flag (CTF) contest is designed to bring together the brightest minds in cybersecurity
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register Now</a>
@@ -115,11 +115,11 @@ export default function Home() {
                 <div className="mt-6 flex items-center gap-4 text-xs text-white/60">
                   <span className="flex items-center gap-2">
                     <a href="#location">
-                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/5">
-                      <svg aria-hidden viewBox="0 0 24 24" className="h-3.5 w-3.5 text-emerald-400">
-                        <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
-                      </svg>
-                    </span>
+                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/5">
+                        <svg aria-hidden viewBox="0 0 24 24" className="h-3.5 w-3.5 text-emerald-400">
+                          <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                        </svg>
+                      </span>
                     </a>
                     <a href="#location" className="whitespace-nowrap">Daffodil International University</a>
                   </span>
@@ -325,7 +325,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-6 text-sm text-white/60">Want to sponsor? <a href="mailto:csc@diu.edu.bd" className="underline decoration-white/30 hover:text-white">Get in touch</a>.</div>
+          <div className="mt-6 text-sm text-white/60">Want to sponsor? <a href="mailto:csclub@diu.edu.bd" className="underline decoration-white/30 hover:text-white">Get in touch</a>.</div>
         </section>
 
         {/* FAQ */}
@@ -420,7 +420,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-8 text-sm text-white/50 flex items-center justify-between">
-          <span>© 2025 DIU CY</span>
+          <span>© 2025 DIU CYBERCON</span>
           <div className="flex items-center gap-4">
             <a href="mailto:csclub@diu.edu.bd" className="hover:text-white">Email</a>
             <a href="https://discord.gg/QwHm5F5y" className="hover:text-white">Discord</a>
