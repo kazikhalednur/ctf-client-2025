@@ -248,20 +248,20 @@ export default function Home() {
                   date: "Oct 08",
                   time: "12:00 PM",
                   title: "Registration closes",
-                  desc: "Teams can register online. Limited slots available.",
+                  desc: "Teams can register online.",
                 },
                 {
                   date: "Nov 9",
                   time: "10:00 AM - 04:00 PM",
                   title: "Online Qualifier (6h)",
+                  desc: "All teams can participate in online qualifier.",
+                },
+                {
+                  date: "Nov 18",
+                  time: "10:00 AM - 04:00 PM",
+                  title: "On-site (6h)",
                   desc: "Top 30 teams are qualify for on-site finals.",
                 },
-                // {
-                //   date: "Nov 16",
-                //   time: "08:00",
-                //   title: "On-site Check-in",
-                //   desc: "Badge pickup, networking, and briefing at DIU Auditorium.",
-                // },
                 // {
                 //   date: "Nov 16",
                 //   time: "09:00",
