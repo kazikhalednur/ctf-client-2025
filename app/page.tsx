@@ -163,7 +163,7 @@ export default function Home() {
                 <li>• 2 rounds: online qualifier and on-site finals at DIU</li>
                 <li>• Team size up to 4, beginner friendly warmups included</li>
                 <li>• Dynamic scoring and live scoreboard</li>
-                <li>• Prizes, trophies, and certificates for top teams</li>
+                <li>• Prizes and certificates for top teams</li>
               </ul>
             </div></div>
           </div>
@@ -245,13 +245,13 @@ export default function Home() {
             <ol className="space-y-6">
               {[
                 {
-                  date: "Oct 08",
+                  date: "Nov 08",
                   time: "12:00 PM",
                   title: "Registration closes",
                   desc: "Teams can register online.",
                 },
                 {
-                  date: "Nov 9",
+                  date: "Nov 09",
                   time: "10:00 AM - 04:00 PM",
                   title: "Online Qualifier (6h)",
                   desc: "All teams can participate in online qualifier.",
@@ -301,7 +301,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-semibold">Prizes</h2>
           <div className="mt-8 grid md:grid-cols-3 gap-4">
             {[
-              { place: "Champion", amount: 50000, perks: ["Trophy", "Certificates", "Swag Kit"] },
+              { place: "Champion", amount: 50000, perks: ["Certificates", "Swag Kit"] },
               { place: "1st Runner-up", amount: 30000, perks: ["Certificates", "Swag Kit"] },
               { place: "2nd Runner-up", amount: 20000, perks: ["Certificates", "Swag Kit"] },
             ].map((p) => (
