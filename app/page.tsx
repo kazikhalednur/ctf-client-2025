@@ -23,7 +23,7 @@ export default function Home() {
 
   function Countdown() {
     // Set your event start time here (local time). Example: Nov 16, 2025 09:00.
-    const { days, hours, minutes, seconds, done } = useCountdown("2025-10-08T12:00:00");
+    const { days, hours, minutes, seconds, done } = useCountdown("2025-10-15T23:59:59");
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
       setMounted(true);
@@ -71,7 +71,7 @@ export default function Home() {
             {/* <a href="#location" className="hover:text-white">Location</a> */}
             <a href="#organizers" className="hover:text-white">ORGANIZERS</a>
             <a href="#faq" className="hover:text-white">FAQ</a>
-            <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400">REGISTER</a>
+            <a href="https://forms.gle/N1hmSEeUNncPUVvS7" target="_blank" className="px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400">REGISTER</a>
           </nav>
         </div>
         {/* Mobile nav */}
@@ -88,7 +88,7 @@ export default function Home() {
             {/* <a href="#location" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">Location</a> */}
             <a href="#organizers" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">ORGANIZERS</a>
             <a href="#faq" className="shrink-0 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30">FAQ</a>
-            <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="shrink-0 px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400 border border-emerald-400/30">REGISTER</a>
+            <a href="https://forms.gle/N1hmSEeUNncPUVvS7" target="_blank" className="shrink-0 px-3 py-1.5 rounded-full bg-emerald-500 text-black font-medium hover:bg-emerald-400 border border-emerald-400/30">REGISTER</a>
           </nav>
         </div>
       </header>
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="absolute inset-0 -z-10">
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-[120vw] rounded-[100%] bg-emerald-500/10 blur-3xl" />
           </div>
-          <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-24 pb-16">
+          <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-8 pb-8">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -109,7 +109,7 @@ export default function Home() {
                   Organized by the Cyber Security Club, Department of Computer Science & Engineering, Daffodil International University, this national-level Capture the Flag (CTF) contest is designed to bring together the brightest minds in cybersecurity
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a href="https://forms.gle/N1hmSEeUNncPUVvS7" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register Now</a>
+                  <a href="https://forms.gle/N1hmSEeUNncPUVvS7" target="_blank" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register Now</a>
                   <a href="#rules" className="px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 text-white">Rules</a>
                 </div>
                 <div className="mt-6 flex items-center gap-4 text-xs text-white/60">
@@ -128,11 +128,11 @@ export default function Home() {
               <div className="relative">
                 <div className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
                   <Image
-                    src="/CYBER_DATE ANN1.jpg"
+                    src="/CYBER_DATE ANN2.jpg"
                     alt="National CTF Competition Banner"
-                    width={1600}
-                    height={900}
-                    className="w-full h-auto object-contain"
+                    width={600}
+                    height={300}
+                    className="h-auto object-contain"
                     priority
                   />
                 </div>
@@ -142,7 +142,7 @@ export default function Home() {
         </section>
 
         {/* Countdown */}
-        <section className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-20 pb-8">
+        <section className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-4 pb-8">
           <Countdown />
         </section>
 
@@ -245,21 +245,21 @@ export default function Home() {
             <ol className="space-y-6">
               {[
                 {
-                  date: "Nov 08",
-                  time: "12:00 PM",
+                  date: "OCT 15",
+                  time: "11:59 PM",
                   title: "Registration closes",
                   desc: "Teams can register online.",
                 },
                 {
-                  date: "Nov 09",
-                  time: "10:00 AM - 04:00 PM",
-                  title: "Online Qualifier (6h)",
+                  date: "OCT 18",
+                  time: "6 - 10 Hours(TBA)",
+                  title: "Online Qualifier",
                   desc: "All teams can participate in online qualifier.",
                 },
                 {
-                  date: "Nov 18",
-                  time: "10:00 AM - 04:00 PM",
-                  title: "On-site (6h)",
+                  date: "OCT 25",
+                  time: "6 - 10 Hours(TBA)",
+                  title: "On-site",
                   desc: "Top 30 teams are qualify for on-site finals.",
                 },
                 // {
@@ -400,7 +400,7 @@ export default function Home() {
               <p className="text-white/70 mt-1">Sign up your team and receive updates.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="#" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register</a>
+              <a href="https://forms.gle/N1hmSEeUNncPUVvS7" target="_blank" className="px-5 py-2.5 rounded-full bg-emerald-500 text-black font-semibold hover:bg-emerald-400">Register</a>
               <a href="#rules" className="px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 text-white">View Rules</a>
             </div>
           </div>
