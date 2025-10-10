@@ -12,27 +12,27 @@ type Speaker = {
 };
 
 const speakers: Speaker[] = [
-    {
-        id: "s1",
-        name: "[Speaker Name]",
-        title: "Security Researcher",
-        bio: "Speaker bio goes here. Expertise in web security, bug bounty, and secure coding.",
-        img: "/mamun.png",
-    },
-    {
-        id: "s2",
-        name: "[Speaker Name]",
-        title: "Incident Responder",
-        bio: "Experienced in DFIR, threat hunting, and SOC operations.",
-        img: "/mamun.png",
-    },
-    {
-        id: "s3",
-        name: "[Speaker Name]",
-        title: "AppSec Engineer",
-        bio: "Focus on SDLC, threat modeling, and automation for large-scale apps.",
-        img: "/mamun.png",
-    },
+    // {
+    //     id: "s1",
+    //     name: "[Speaker Name]",
+    //     title: "Security Researcher",
+    //     bio: "Speaker bio goes here. Expertise in web security, bug bounty, and secure coding.",
+    //     img: "/mamun.png",
+    // },
+    // {
+    //     id: "s2",
+    //     name: "[Speaker Name]",
+    //     title: "Incident Responder",
+    //     bio: "Experienced in DFIR, threat hunting, and SOC operations.",
+    //     img: "/mamun.png",
+    // },
+    // {
+    //     id: "s3",
+    //     name: "[Speaker Name]",
+    //     title: "AppSec Engineer",
+    //     bio: "Focus on SDLC, threat modeling, and automation for large-scale apps.",
+    //     img: "/mamun.png",
+    // },
 ];
 
 export default function SpeakersPage() {
