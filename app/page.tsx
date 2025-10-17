@@ -2,6 +2,16 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
+import Banner from "@/assets/images/CYBER_DATE_ANN3.jpg";
+import Axentec from "@/assets/sponsers/axentec.png";
+import CreativeIT from "@/assets/sponsers/creativeitinstitute.jpeg";
+import DarkEye from "@/assets/sponsers/darkeye.png";
+import NRBBank from "@/assets/sponsers/NRB_Bank.png";
+import PrimeNet from "@/assets/sponsers/primenet-white.png";
+import ZoomEye from "@/assets/sponsers/zoomeye.jpg";
+import JabedImage from "@/assets/speakers/jabed_morshed_chowdhury.jpg";
+import SamiulImage from "@/assets/speakers/samiul_islam.jpg";
+import ShaheeImage from "@/assets/speakers/shahee_mirza.jpg";
 
 export default function Home() {
   function useCountdown(targetDateISO: string) {
@@ -23,7 +33,7 @@ export default function Home() {
 
   function Countdown() {
     // Set your event start time here (local time). Example: Nov 16, 2025 09:00.
-    const { days, hours, minutes, seconds, done } = useCountdown("2025-10-15T23:59:59");
+    const { days, hours, minutes, seconds, done } = useCountdown("2025-10-18T11:59:00");
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
       setMounted(true);
@@ -32,7 +42,7 @@ export default function Home() {
       <div className="rounded-2xl border border-emerald-400/20 bg-emerald-500/5 p-6">
         <div className="text-center">
           <div className="text-white/80 font-medium text-3xl pb-2">National CTF Competition 2025</div>
-          <div className="text-white/80 font-medium text-xl">The registration closes in</div>
+          <div className="text-white/80 font-medium text-xl">The Online Qualifier Starts in</div>
         </div>
         <div className="mt-4 grid grid-cols-4 gap-3 text-center">
           {[{ k: "Days", v: days }, { k: "Hours", v: hours }, { k: "Minutes", v: minutes }, { k: "Seconds", v: seconds }].map((i) => (
@@ -97,7 +107,7 @@ export default function Home() {
         {/* Hero */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-[120vw] rounded-[100%] bg-emerald-500/10 blur-3xl" />
+            <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-[100vh] w-[120vw] rounded-[100%] bg-emerald-500/10 blur-3xl" />
           </div>
           <div className="max-w-screen-2xl mx-auto px-3 sm:px-5 pt-8 pb-8">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -128,10 +138,10 @@ export default function Home() {
               <div className="relative">
                 <div className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
                   <Image
-                    src="/CYBER_DATE ANN2.jpg"
+                    src={Banner}
                     alt="National CTF Competition Banner"
-                    width={600}
-                    height={300}
+                    width={1200}
+                    height={700}
                     className="h-auto object-contain"
                     priority
                   />
@@ -236,6 +246,64 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Speakers */}
+        <section id="speakers" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
+          <h2 className="text-2xl md:text-3xl font-semibold">Speakers</h2>
+          <p className="mt-2 text-white/60">Meet our expert speakers for National CTF Competition 2025.</p>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Dr. Jabed Morshed Chowdhury",
+                title: "Senior Lecturer at La Trobe University, Melbourne, Australia",
+                expertise: "Digital Forensics",
+                linkedin: "https://www.linkedin.com/in/jabedmchowdhury/",
+                image: JabedImage
+              },
+              {
+                name: "Samiul Islam",
+                title: "L2 SOC Analyst | Technical trainer FIRST community",
+                expertise: "Blue Team",
+                linkedin: "https://www.linkedin.com/in/samiul008/",
+                image: SamiulImage
+              },
+              {
+                name: "Shahee Mirza",
+                title: "Cybersecurity Entrepreneur & CISO",
+                expertise: "Red Team",
+                linkedin: "https://www.linkedin.com/in/shaheemirza/",
+                image: ShaheeImage
+              }
+            ].map((speaker) => (
+              <div key={speaker.name} className="rounded-xl border border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-4">
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.name}
+                      width={80}
+                      height={80}
+                      className="h-20 w-20 rounded-full object-cover border-2 border-emerald-400/30"
+                    />
+                    <div className="absolute -bottom-1 -right-1 px-2 py-1 rounded-full bg-emerald-500 text-black text-xs font-bold">
+                      {speaker.expertise.charAt(0)}
+                    </div>
+                  </div>
+                  <h3 className="text-white font-semibold text-lg">{speaker.name}</h3>
+                  <p className="text-white/70 text-sm mt-1 leading-relaxed">{speaker.title}</p>
+                  <div className="mt-4 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/20 text-emerald-400 text-xs font-medium">
+                    {speaker.expertise}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <a href="/speakers" className="px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 text-white">
+              View All Speakers
+            </a>
+          </div>
+        </section>
+
         {/* Timeline */}
         <section id="timeline" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">Timeline</h2>
@@ -252,7 +320,7 @@ export default function Home() {
                 },
                 {
                   date: "OCT 18",
-                  time: "6 - 10 Hours(TBA)",
+                  time: "12:00 PM - 08:00 PM",
                   title: "Online Qualifier",
                   desc: "All teams can participate in online qualifier.",
                 },
@@ -318,10 +386,24 @@ export default function Home() {
         <section id="sponsors" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
           <h2 className="text-2xl md:text-3xl font-semibold">Sponsors</h2>
           <p className="mt-2 text-white/60">Thanks to our partners for supporting National CTF Competition 2025.</p>
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center">
-            {["/diu.png"].map((src) => (
-              <div key={src} className="rounded-xl border border-white/10 bg-white/5 p-6 flex items-center justify-center">
-                <Image src={src} alt="Sponsor" width={140} height={40} className="opacity-90 contrast-125 invert-0" />
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {[
+              { src: "/diu.png", alt: "DIU" },
+              { src: Axentec, alt: "Axentec" },
+              { src: CreativeIT, alt: "Creative IT Institute" },
+              { src: DarkEye, alt: "DarkEye" },
+              { src: NRBBank, alt: "NRB Bank" },
+              { src: PrimeNet, alt: "PrimeNet" },
+              { src: ZoomEye, alt: "ZoomEye" }
+            ].map((sponsor) => (
+              <div key={sponsor.alt} className="rounded-xl border border-white/10 bg-white/5 p-6 flex items-center justify-center h-40 hover:border-white/20 transition-colors">
+                <Image
+                  src={sponsor.src}
+                  alt={sponsor.alt}
+                  width={140}
+                  height={40}
+                  className="max-w-full max-h-full object-contain opacity-90 contrast-125 invert-0"
+                />
               </div>
             ))}
           </div>
@@ -362,6 +444,74 @@ export default function Home() {
                 <div className="px-5 pb-5 text-white/70 text-sm leading-relaxed">{f.a}</div>
               </details>
             ))}
+          </div>
+        </section>
+
+        {/* Rules */}
+        <section id="rules" className="max-w-screen-2xl mx-auto px-3 sm:px-5 py-16">
+          <h2 className="text-2xl md:text-3xl font-semibold">Rules & Eligibility</h2>
+          <p className="mt-2 text-white/60">Important guidelines for National CTF Competition 2025.</p>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-8">
+            {/* Eligibility */}
+            <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-xl font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                <span className="text-2xl">🎓</span>
+                Eligibility
+              </h3>
+              <ul className="space-y-3 text-white/80 text-sm">
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">🏫</span>
+                  <span>Participants must be current school, college, polytechnic, university students, or corporate job holders.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">👥</span>
+                  <span>Teams must consist of 1–4 members.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">⏰</span>
+                  <span>After the registration deadline, team members cannot be changed or added.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">🤝</span>
+                  <span>Cross-institution teams are allowed.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">🏛️</span>
+                  <span>Universities should be UGC registered & other institutions must be recognized as Bangladeshi.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">🥇</span>
+                  <span>Top 32 teams from the preliminary round and 3 teams from Daffodil International University — total 35 teams — will qualify for the final round.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">🪪</span>
+                  <span>All team members must bring hard copies of their student ID or proof of studentship documents submitted during registration. Failure to do so will result in disqualification.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Fair Play Rules */}
+            <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center gap-2">
+                <span className="text-2xl">⚖️</span>
+                Fair Play Rules
+              </h3>
+              <ul className="space-y-3 text-white/80 text-sm">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">🚫</span>
+                  <span>Do not attack or DDoS the challenge infrastructure or other teams.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">🔒</span>
+                  <span>No automated scans or brute-forcing on the flag validation endpoint or event infrastructure.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">🤐</span>
+                  <span>No sharing of flags, solutions, or hints outside your team.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
