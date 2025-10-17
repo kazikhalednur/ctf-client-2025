@@ -535,7 +535,7 @@ export default function Home() {
                 <div className="text-white/80 font-medium">Venue details</div>
                 <ul className="mt-3 text-white/70 text-sm space-y-2">
                   <li>Daffodil International University</li>
-                  <li>Daffodil Smart City, Ashulia, Dhaka, Bangladesh</li>
+                  <li>Daffodil Smart City, Birulia, Savar, Dhaka, Bangladesh</li>
                 </ul>
               </div>
             </div>
